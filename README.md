@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SmartCart Co. Portfolio
 
-## Getting Started
+Welcome to the official single-page portfolio website for **SmartCart Co.**, a product-based company focused on eliminating grocery billing queues with our cutting-edge Smart Digital Cart System.
 
-First, run the development server:
+This website was engineered natively to provide a premium, highly-interactive "scroll-and-story" experience.
+
+## ✨ Features
+
+- **Blazing Fast Performance**: Built on the modern Next.js 14+ App Router architecture.
+- **Griflan-Inspired Aesthetics**:
+  - Immersive physical smooth scrolling powered by **Lenis**.
+  - Abstract, bold, oversized parallax typography scaling deeply in Z-space on scroll.
+  - A responsive Custom Inverse Cursor overlay for deeper interactivity.
+- **Micro-Animations**: Extensive scroll-based view hooks and transition variants powered entirely by **Framer Motion**.
+- **SEO Optimized**: Fully structured semantic HTML5 layouts, canonical tags, optimized Open Graph imagery paths, mapping structured metadata via JSON-LD.
+- **Custom Components**: Zero UI libraries utilized. The styling depends purely on custom-configured **Tailwind CSS v4**.
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Interactivity**: Framer Motion
+- **Scroll Engine**: Lenis Smooth Scroll
+- **Package Manager**: Bun 🚀
+
+## 📦 Getting Started
+
+This repository uses **Bun** as its package manager instead of NPM or Yarn for maximum speed and optimization.
+
+First, ensure you have [Bun installed](https://bun.sh/).
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+# Clone the repository
+git clone <your-repo-url>
+cd smartcart
+
+# Install dependencies rapidly via Bun
+bun install
+
+# Start the development server
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `app/page.tsx`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+smartcart/
+├── app/
+│   ├── layout.tsx         # Root layout + SEO metadata + Scroll/Cursor Providers
+│   ├── page.tsx           # Single page map combining all semantic sections
+│   └── globals.css        # Tailwind base, global physical configurations
+├── components/
+│   ├── CustomCursor.tsx   # Mix-blend inverse motion cursor
+│   ├── SmoothScroll.tsx   # Lenis initialization wrapper
+│   ├── Hero.tsx           # Giant typography & abstract gradient visualizer
+│   ├── Problem.tsx        # Negative-scroll marquee typography + counter hooks
+│   ├── Solution.tsx       # Rotating hardware carts and overlapping SVG transforms
+│   ├── HowItWorks.tsx     # Bouncy UI cards with cursor interactives
+│   ├── Features.tsx       # Side-by-side feature grids
+│   ├── Security.tsx       # Two-layer diagram grids
+│   ├── Roadmap.tsx        # History/timeline mapping array visualizations
+│   ├── Feasibility.tsx    # Clean data metric comparisons
+│   ├── Contact.tsx        # Fast-response CTA implementation
+│   └── svg/               # Statically managed inline React SVGs (Shield, Carts)
+└── hooks/
+    └── useScrollSection.ts # Section tracking for complex navigational awareness
+```
 
-## Learn More
+## 🌐 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+You can seamlessly deploy this to Vercel (the creators of Next.js) or any Edge server.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+bun run build
+bun run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+&copy; SmartCart Co. All rights reserved.
